@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Globe Info</title>
+
+    <link rel="stylesheet" href="./main/output.css" />
+
+     <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--~~~~~~~~~~~~~~~ Main ~~~~~~~~~~~~~~~-->
+    <main>
+      <!--~~~~~~~~~~~~~~~ Login page ~~~~~~~~~~~~~~~-->
+      <section id="login" class="text-black">
+        <div
+          class="md:bg-[url('/image/loginBg1.jpg')] h-full md:h-screen w-full bg-cover bg-no-repeat bg-center flex items-center"
+        >
+          <div
+            class="container-lg h-full overflow-hidden bg-white grid lg:grid-cols-2 grid-cols-1"
+          >
+            <div
+              class="bg-[url('/image/loginBg2.jpg')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="md:px-36 px-4 md:py-16 py-14">
+              <div>
+                <div class="flex justify-center">
+                  <img src="./image/logo.png" class="w-40" alt="logo" />
+                </div>
+                <h2 class="about-title text-center my-3 text-secondaryColor">
+                  Login Account
+                </h2>
+                <p class="para text-center pb-10">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia omnis tempora ipsam ipsum qui eum sint voluptatibus
+                  quam reiciendis delectus.
+                </p>
+
+                <div>
+                  <form action="#">
+                    <div class="flex items-center relative">
+                      <input
+                        class="bg-gray-100 w-full outline-secondaryColor rounded-md px-3 py-2 my-4"
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email ID"
+                      />
+                      <i
+                        class="fa-solid fa-envelope absolute right-2 text-secondaryColor"
+                      ></i>
+                    </div>
+                    <div class="flex items-center relative">
+                      <input
+                        class="bg-gray-100 w-full outline-secondaryColor rounded-md px-3 py-2"
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                      />
+                      <i
+                        class="fa-solid fa-lock absolute right-2 text-secondaryColor"
+                      ></i>
+                    </div>
+                    <div class="flex justify-between items-center px-3 py-8">
+                      <div class="flex items-center gap-1">
+                        <input type="checkbox" name="saveUser" id="saveUser" />
+                        <label for="saveUser" class="text-xs"
+                          >Keep me signed in</label
+                        >
+                      </div>
+                      <a href="#" class="text-xs text-[#1D82D3] hover:underline"
+                        >Already a member?</a
+                      >
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn bg-secondaryColor w-full rounded-full font-bold outline-none"
+                    >
+                      Log In
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

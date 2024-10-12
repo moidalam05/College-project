@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Globe Info Country</title>
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="./main/output.css" />
+  </head>
+  <body>
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header class="bg-darkColor top-0 left-0 w-full z-50" id="header">
+      <nav
+        class="px-3 lg:px-28 relative h-20 flex items-center justify-between"
+      >
+        <div>
+          <a href="index.html"
+            ><img src="./image/logo.png" alt="logo" class="w-20"
+          /></a>
+        </div>
+
+        <div
+          class="hidden absolute top-0 right-0 w-full py-20 bg-darkColor lg:block lg:static lg:py-0 lg:w-auto menu"
+        >
+          <ul class="flex flex-col text-center gap-6 lg:flex-row">
+            <li>
+              <a
+                href="index.html"
+                class="nav-link navbar hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >Home</a
+              >
+            </li>
+            <li class="flex group/item relative items-center flex-col dropdown">
+              <a
+                href="#country"
+                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >Country
+                <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <style>
+                .scrollbar::-webkit-scrollbar {
+                  width: 5px;
+                }
+                .scrollbar::-webkit-scrollbar-track {
+                  box-shadow: inset 0px 0px 5px grey;
+                  border-radius: 10px;
+                }
+                .scrollbar::-webkit-scrollbar-thumb {
+                  background-color: orange;
+                  border-radius: 10px;
+                }
+                .scrollbar::-webkit-scrollbar-thumb:hover {
+                  background: #b30000;
+                }
+              </style>
+              <div
+                class="scrollbar hidden absolute top-7 py-6 h-48 overflow-y-auto w-[8rem] rounded-lg bg-darkColorLight text-white text-left px-3"
+              >
+                <ul class="country-list">
+                  <li><a href="#">India</a></li>
+                  <li><a href="#">USA</a></li>
+                  <li><a href="#">UAE</a></li>
+                  <li><a href="#">Australia hh</a></li>
+                  <li><a href="#">China</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#blogs"
+                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+                >Contact</a
+              >
+            </li>
+            <li class="group">
+              Join Us
+              <div
+                class="flex-col absolute bg-black -ml-2 p-2 rounded pr-5 hidden group-hover:block"
+              >
+                <a href="#">Sign up</a><br />
+                <a href="#">Sign in</a>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="absolute top-[.7rem] right-4 text-2xl cursor-pointer md:hidden"
+          >
+            <i class="ri-close-line" id="close"></i>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-facebook hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-instagram hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-threads hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-x-twitter hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+            ></i>
+          </a>
+
+          <div id="hamburger" class="lg:hidden">
+            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--~~~~~~~~~~~~~~~ main ~~~~~~~~~~~~~~~-->
+    <main class="flex justify-between">
+      <!--~~~~~~~~~~~~~~~ Side bar navigation ~~~~~~~~~~~~~~~-->
+      <div class="mt-52 pl-10">
+        <ul class="text-linkClor sticky top-4 w-[13rem] text-sm leading-loose">
+          <h3 class="py-5 text-xl text-black font-bold">Content</h3>
+          <li>
+            <a href="#" class="hover:underline ease-in duration-200">Top</a>
+          </li>
+          <li>
+            <a href="#history" class="hover:underline ease-in duration-200"
+              >History</a
+            >
+          </li>
+          <li>
+            <a href="#tourist" class="hover:underline ease-in duration-200"
+              >Tourist places</a
+            >
+          </li>
+          <li>
+            <a href="#cities" class="hover:underline ease-in duration-200"
+              >Top cities</a
+            >
+          </li>
+          <li>
+            <a
+              href="#historical-places"
+              class="hover:underline ease-in duration-200"
+              >Historical places</a
+            >
+          </li>
+          <li>
+            <a href="#universities" class="hover:underline ease-in duration-200"
+              >Top universities</a
+            >
+          </li>
+          <li>
+            <a href="#hotels" class="hover:underline ease-in duration-200"
+              >Top hotels</a
+            >
+          </li>
+          <li>
+            <a href="#states" class="hover:underline ease-in duration-200"
+              >States</a
+            >
+          </li>
+          <li>
+            <a href="#map" class="hover:underline ease-in duration-200">Map</a>
+          </li>
+          <li>
+            <a href="#external" class="hover:underline ease-in duration-200"
+              >External links</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!--~~~~~~~~~~~~~~~ country data ~~~~~~~~~~~~~~~-->
+      <div>
+        <!--~~~~~~~~~~~~~~~ India Heading ~~~~~~~~~~~~~~~-->
+        <div class="text-black mt-24 pt-8 pb-4 z-50 bg-white pr-24">
+          <h2 class="about-title">India</h2>
+          <div class="h-[2px] bg-gray-400"></div>
+        </div>
+
+        <!--~~~~~~~~~~~~~~~ article of india ~~~~~~~~~~~~~~~-->
+        <section id="country-data">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="pt-8">
+                <span
+                  class="ml-4 float-right w-[17rem] border-gray-400 border bg-gray-50"
+                >
+                  <div>
+                    <h3 class="pl-2 py-2">Basic information</h3>
+                    <div class="h-[1px] bg-gray-400"></div>
+                  </div>
+
+                  <div>
+                    <div class="flex px-2 py-4">
+                      <div class="w-1/2 h-24 flex flex-col items-center">
+                        <img src="./image/flag-1.png" alt="flag of india" />
+                        <h5 class="text-xs py-2">Flag</h5>
+                      </div>
+                      <div class="w-1/2 h-24 flex flex-col items-center">
+                        <img
+                          src="./image/Emblem.png"
+                          class="w-12"
+                          alt="Emblem of india"
+                        />
+                        <h5 class="text-xs py-2">Emblem</h5>
+                      </div>
+                    </div>
+                    <div class="h-[1px] bg-gray-400"></div>
+                  </div>
+
+                  <div class="px-2 py-2">
+                    <table class="text-left text-xs leading-relaxed">
+                      <tr>
+                        <th>Nationality</th>
+                        <td class="pl-12">Indian</td>
+                      </tr>
+                      <tr>
+                        <th>Capital</th>
+                        <td class="pl-12">New Delhi</td>
+                      </tr>
+                      <tr>
+                        <th>Country Code</th>
+                        <td class="pl-12">+91</td>
+                      </tr>
+                      <tr>
+                        <th>Area</th>
+                        <td class="pl-12">32,87,263 km<sup>2</sup></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="h-[1px] bg-gray-400"></div>
+
+                  <div class="px-2 py-2">
+                    <table class="text-left text-xs leading-relaxed">
+                      <tr>
+                        <th>Population</th>
+                        <td class="pl-16">1,425,775,850 (2023 est.)</td>
+                      </tr>
+                      <tr>
+                        <th>Density</th>
+                        <td class="pl-16">
+                          473.42 people per km<sup>2</sup> (2021 est.)
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Currency</th>
+                        <td class="pl-16">Indian Rupees (INR)</td>
+                      </tr>
+                      <tr>
+                        <th>Time Zone</th>
+                        <td class="pl-16">UTC+05:30</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="h-[1px] bg-gray-400"></div>
+
+                  <div class="px-2 py-2">
+                    <table class="text-left text-xs leading-relaxed">
+                      <tr>
+                        <th>Official Language</th>
+                        <td class="pl-5">Hindi</td>
+                      </tr>
+                      <tr>
+                        <th>Native Language</th>
+                        <td class="pl-5">447</td>
+                      </tr>
+                    </table>
+                  </div>
+                </span>
+                <p class="pb-2">
+                  India, officially the Republic of India (ISO: Bhārat
+                  Gaṇarājya),[21] is a country in South Asia. It is the
+                  seventh-largest country by area; the most populous country as
+                  of June 2023;[22][23] and from the time of its independence in
+                  1947, the world's most populous democracy.[24][25][26] Bounded
+                  by the Indian Ocean on the south, the Arabian Sea on the
+                  southwest, and the Bay of Bengal on the southeast, it shares
+                  land borders with Pakistan to the west;[j] China, Nepal, and
+                  Bhutan to the north; and Bangladesh and Myanmar to the east.
+                  In the Indian Ocean, India is in the vicinity of Sri Lanka and
+                  the Maldives; its Andaman and Nicobar Islands share a maritime
+                  border with Thailand, Myanmar, and Indonesia.
+                </p>
+                <p class="pb-2">
+                  Modern humans arrived on the Indian subcontinent from Africa
+                  no later than 55,000 years ago.[27][28][29] Their long
+                  occupation, initially in varying forms of isolation as
+                  hunter-gatherers, has made the region highly diverse, second
+                  only to Africa in human genetic diversity.[30] Settled life
+                  emerged on the subcontinent in the western margins of the
+                  Indus river basin 9,000 years ago, evolving gradually into the
+                  Indus Valley Civilisation of the third millennium BCE.[31] By
+                  1200 BCE, an archaic form of Sanskrit, an Indo-European
+                  language, had diffused into India from the northwest.[32][33]
+                  Its evidence today is found in the hymns of the Rigveda.
+                  Preserved by an oral tradition that was resolutely vigilant,
+                  the Rigveda records the dawning of Hinduism in India.[34] The
+                  Dravidian languages of India were supplanted in the northern
+                  and western regions.[35] By 400 BCE, stratification and
+                  exclusion by caste had emerged within Hinduism,[36] and
+                  Buddhism and Jainism had arisen, proclaiming social orders
+                  unlinked to heredity.[37] Early political consolidations gave
+                  rise to the loose-knit Maurya and Gupta Empires based in the
+                  Ganges Basin.[38] Their collective era was suffused with
+                  wide-ranging creativity,[39] but also marked by the declining
+                  status of women,[40] and the incorporation of untouchability
+                  into an organised system of belief.[k][41] In South India, the
+                  Middle kingdoms exported Dravidian-languages scripts and
+                  religious cultures to the kingdoms of Southeast Asia.[42]
+                </p>
+                <p class="pb-2">
+                  In the early medieval era, Christianity, Islam, Judaism, and
+                  Zoroastrianism became established on India's southern and
+                  western coasts.[43] Muslim armies from Central Asia
+                  intermittently overran India's northern plains,[44] eventually
+                  founding the Delhi Sultanate, and drawing northern India into
+                  the cosmopolitan networks of medieval Islam.[45] In the 15th
+                  century, the Vijayanagara Empire created a long-lasting
+                  composite Hindu culture in south India.[46] In the Punjab,
+                  Sikhism emerged, rejecting institutionalised religion.[47] The
+                  Mughal Empire, in 1526, ushered in two centuries of relative
+                  peace,[48] leaving a legacy of luminous architecture.[l][49]
+                  Gradually expanding rule of the British East India Company
+                  followed, turning India into a colonial economy, but also
+                  consolidating its sovereignty.[50] British Crown rule began in
+                  1858. The rights promised to Indians were granted
+                  slowly,[51][52] but technological changes were introduced, and
+                  modern ideas of education and the public life took root.[53] A
+                  pioneering and influential nationalist movement emerged, which
+                  was noted for nonviolent resistance and became the major
+                  factor in ending British rule.[54][55] In 1947 the British
+                  Indian Empire was partitioned into two independent
+                  dominions,[56][57][58][59] a Hindu-majority Dominion of India
+                  and a Muslim-majority Dominion of Pakistan, amid large-scale
+                  loss of life and an unprecedented migration.[60]
+                </p>
+                <p class="pb-2">
+                  India has been a federal republic since 1950, governed through
+                  a democratic parliamentary system. It is a pluralistic,
+                  multilingual and multi-ethnic society. India's population grew
+                  from 361 million in 1951 to almost 1.4 billion in 2022.[61]
+                  During the same time, its nominal per capita income increased
+                  from US$64 annually to US$2,601, and its literacy rate from
+                  16.6% to 74%. From being a comparatively destitute country in
+                  1951,[62] India has become a fast-growing major economy and a
+                  hub for information technology services, with an expanding
+                  middle class.[63] India has a space programme with several
+                  planned or completed extraterrestrial missions. It is the
+                  fourth country to land a craft on the moon and the first to do
+                  so within 600 kilometres (370 mi) of the Lunar south pole.[64]
+                  Indian movies, music, and spiritual teachings play an
+                  increasing role in global culture.[65] India has substantially
+                  reduced its rate of poverty, though at the cost of increasing
+                  economic inequality.[66] India is a nuclear-weapon state,
+                  which ranks high in military expenditure. It has disputes over
+                  Kashmir with its neighbours, Pakistan and China, unresolved
+                  since the mid-20th century.[67] Among the socio-economic
+                  challenges India faces are gender inequality, child
+                  malnutrition,[68] and rising levels of air pollution.[69]
+                  India's land is megadiverse, with four biodiversity
+                  hotspots.[70] Its forest cover comprises 21.7% of its
+                  area.[71] India's wildlife, which has traditionally been
+                  viewed with tolerance in India's culture,[72] is supported
+                  among these forests, and elsewhere, in protected habitats.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~-->
+        <section id="history">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="py-8">
+                <div class="pb-8">
+                  <h2 class="data-title py-1">History</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p class="pb-2">
+                  India, officially the Republic of India (ISO: Bhārat
+                  Gaṇarājya),[21] is a country in South Asia. It is the
+                  seventh-largest country by area; the most populous country as
+                  of June 2023;[22][23] and from the time of its independence in
+                  1947, the world's most populous democracy.[24][25][26] Bounded
+                  by the Indian Ocean on the south, the Arabian Sea on the
+                  southwest, and the Bay of Bengal on the southeast, it shares
+                  land borders with Pakistan to the west;[j] China, Nepal, and
+                  Bhutan to the north; and Bangladesh and Myanmar to the east.
+                  In the Indian Ocean, India is in the vicinity of Sri Lanka and
+                  the Maldives; its Andaman and Nicobar Islands share a maritime
+                  border with Thailand, Myanmar, and Indonesia. Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Ab asperiores
+                  laboriosam culpa itaque! Quaerat pariatur placeat
+                  exercitationem dignissimos expedita debitis officia sed, sunt
+                  atque doloribus incidunt adipisci iusto nisi corporis libero
+                  distinctio veniam nulla harum quasi a vero id nostrum corrupti
+                  porro! Rem, excepturi. Quibusdam impedit consequuntur maxime
+                  alias rem magnam numquam necessitatibus quae iusto! Tenetur
+                  quo illum cum eveniet modi dolore laborum neque non expedita
+                  recusandae distinctio autem corporis laudantium atque est
+                  consequatur porro veniam sint, labore amet enim harum? Facilis
+                  atque harum quod reprehenderit numquam recusandae provident
+                  veniam veritatis? Quia commodi tenetur exercitationem ipsam,
+                  praesentium est non qui!
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Tourist Places ~~~~~~~~~~~~~~~-->
+        <section id="tourist" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="pb-8">
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Tourist Places</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  assumenda, tenetur magni culpa, esse quos dicta commodi autem
+                  minima repellat ducimus quidem? Corrupti aliquam laboriosam
+                  quis eveniet animi, tenetur earum quaerat, deleniti veniam
+                  vitae corporis commodi a nostrum ad adipisci amet unde et!
+                  Assumenda error, nihil consectetur vero, magni iste illum aut
+                  at non ipsa quia. Perspiciatis excepturi eius delectus illo,
+                  dolorum accusantium labore voluptatibus ducimus voluptates
+                  dolore laudantium atque maxime. Laudantium sunt porro amet
+                  voluptatibus id magni, quas quisquam mollitia. Modi illo neque
+                  adipisci exercitationem distinctio. Explicabo quos
+                  exercitationem, corporis repellendus esse nemo dicta soluta
+                  mollitia veniam accusantium ex!
+                </p>
+
+                <div>
+                  <h4 class="card-title py-6">Top Tourist Places in India</h4>
+                  <ul class="list-decimal pl-10 leading-relaxed text-linkClor">
+                    <li>
+                      <a href="#tourist-1" class="hover:underline"
+                        >India Gate</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-2" class="hover:underline">Taj Mahal</a>
+                    </li>
+                    <li>
+                      <a href="#tourist-3" class="hover:underline"
+                        >Gateway of India</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-4" class="hover:underline"
+                        >Golden Temple</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-5" class="hover:underline"
+                        >Amber Palace</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-6" class="hover:underline">Kedarnath</a>
+                    </li>
+                    <li>
+                      <a href="#tourist-7" class="hover:underline"
+                        >Shree Baisno Devi</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-8" class="hover:underline">Bodh Gaya</a>
+                    </li>
+                    <li>
+                      <a href="#tourist-9" class="hover:underline"
+                        >Char Minar</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tourist-10" class="hover:underline"
+                        >Tiger Hill</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <ul>
+                    <li class="pt-8" id="tourist-1">
+                      <h3 class="text-xl font-bold py-1">1. India Gate</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>New
+                          Delhi</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-2">
+                      <h3 class="text-xl font-bold py-1">2. Taj Mahal</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>Uttar
+                          Pradesh, Agra</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-3">
+                      <h3 class="text-xl font-bold py-1">
+                        3. Gateway of India
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i
+                          >Mumbai</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-4">
+                      <h3 class="text-xl font-bold py-1">4. Golden Temple</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>Punjab,
+                          Amritsar</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-5">
+                      <h3 class="text-xl font-bold py-1">5. Amber Palace</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i
+                          >Rajasthan</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-6">
+                      <h3 class="text-xl font-bold py-1">6. Kedarnath</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i
+                          >Uttrakhand</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-7">
+                      <h3 class="text-xl font-bold py-1">
+                        7. Shree Baisno Devi
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>Jammu &
+                          Kashmir</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-8">
+                      <h3 class="text-xl font-bold py-1">8. Bodh Gaya</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>Bihar</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-9">
+                      <h3 class="text-xl font-bold py-1">9. Char Minar</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i
+                          >Hyderabad</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="tourist-10">
+                      <h3 class="text-xl font-bold py-1">10. Tiger Hill</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="pt-8">
+                        <img src="./image/tourist-1.jpg" alt="india gate" />
+                        <a
+                          href="#"
+                          class="underline py-4 inline-block text-linkClor"
+                          ><i class="fa-solid fa-location-dot px-2"></i>West
+                          Bengal</a
+                        >
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Top Cities ~~~~~~~~~~~~~~~-->
+        <section id="cities" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article>
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Top Cities</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  assumenda, tenetur magni culpa, esse quos dicta commodi autem
+                  minima repellat ducimus quidem? Corrupti aliquam laboriosam
+                  quis eveniet animi, tenetur earum quaerat, deleniti veniam
+                  vitae corporis commodi a nostrum ad adipisci amet unde et!
+                  Assumenda error, nihil consectetur vero, magni iste illum aut
+                  at non ipsa quia. Perspiciatis excepturi eius delectus illo,
+                  dolorum accusantium labore voluptatibus ducimus voluptates
+                  dolore laudantium atque maxime. Laudantium sunt porro amet
+                  voluptatibus id magni, quas quisquam mollitia. Modi illo neque
+                  adipisci exercitationem distinctio. Explicabo quos
+                  exercitationem, corporis repellendus esse nemo dicta soluta
+                  mollitia veniam accusantium ex!
+                </p>
+
+                <div>
+                  <h4 class="card-title py-6">Top Cities in India</h4>
+                  <ul class="list-decimal pl-10 leading-relaxed text-linkClor">
+                    <li>
+                      <a href="#city-1" class="hover:underline">New Delhi</a>
+                    </li>
+                    <li>
+                      <a href="#city-2" class="hover:underline">Mumbai</a>
+                    </li>
+                    <li>
+                      <a href="#city-3" class="hover:underline">Kolkata</a>
+                    </li>
+                    <li>
+                      <a href="#city-4" class="hover:underline">Chennai</a>
+                    </li>
+                    <li>
+                      <a href="#city-5" class="hover:underline">Hyderabad</a>
+                    </li>
+                    <li>
+                      <a href="#city-6" class="hover:underline">Bengaluru</a>
+                    </li>
+                    <li>
+                      <a href="#city-7" class="hover:underline">Surat</a>
+                    </li>
+                    <li><a href="#city-8" class="hover:underline">Pune</a></li>
+                    <li>
+                      <a href="#city-9" class="hover:underline">Ahmedabad</a>
+                    </li>
+                    <li>
+                      <a href="#city-10" class="hover:underline">Jaipur</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <ul>
+                    <li class="pt-8" id="city-1">
+                      <h3 class="text-xl font-bold py-1">1. New Delhi</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-2">
+                      <h3 class="text-xl font-bold py-1">2. Mumbai</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-3">
+                      <h3 class="text-xl font-bold py-1">3. Kolkata</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-4">
+                      <h3 class="text-xl font-bold py-1">4. Chennai</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-5">
+                      <h3 class="text-xl font-bold py-1">5. Hyderabad</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-6">
+                      <h3 class="text-xl font-bold py-1">6. Bengaluru</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-7">
+                      <h3 class="text-xl font-bold py-1">7. Surat</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-8">
+                      <h3 class="text-xl font-bold py-1">8. Pune</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-9">
+                      <h3 class="text-xl font-bold py-1">9. Ahmedabad</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="city-10">
+                      <h3 class="text-xl font-bold py-1">10. Jaipur</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-right w-96 pl-4 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Historical Places ~~~~~~~~~~~~~~~-->
+        <section id="historical-places" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article>
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Historical Places</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  assumenda, tenetur magni culpa, esse quos dicta commodi autem
+                  minima repellat ducimus quidem? Corrupti aliquam laboriosam
+                  quis eveniet animi, tenetur earum quaerat, deleniti veniam
+                  vitae corporis commodi a nostrum ad adipisci amet unde et!
+                  Assumenda error, nihil consectetur vero, magni iste illum aut
+                  at non ipsa quia. Perspiciatis excepturi eius delectus illo,
+                  dolorum accusantium labore voluptatibus ducimus voluptates
+                  dolore laudantium atque maxime. Laudantium sunt porro amet
+                  voluptatibus id magni, quas quisquam mollitia. Modi illo neque
+                  adipisci exercitationem distinctio. Explicabo quos
+                  exercitationem, corporis repellendus esse nemo dicta soluta
+                  mollitia veniam accusantium ex!
+                </p>
+
+                <div>
+                  <ul
+                    class="list-decimal pl-10 pt-8 leading-relaxed text-linkClor"
+                  >
+                    <li>
+                      <a href="#history-1" class="hover:underline">New Delhi</a>
+                    </li>
+                    <li>
+                      <a href="#history-2" class="hover:underline">Mumbai</a>
+                    </li>
+                    <li>
+                      <a href="#history-3" class="hover:underline">Kolkata</a>
+                    </li>
+                    <li>
+                      <a href="#history-4" class="hover:underline">Chennai</a>
+                    </li>
+                    <li>
+                      <a href="#history-5" class="hover:underline">Hyderabad</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <ul>
+                    <li class="pt-8" id="history-1">
+                      <h3 class="text-xl font-bold py-1">
+                        1. Talatal Ghar, Assam
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-left pr-4 w-96 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="history-2">
+                      <h3 class="text-xl font-bold py-1">2. Mumbai</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-left pr-4 w-96 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="history-3">
+                      <h3 class="text-xl font-bold py-1">3. Kolkata</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-left pr-4 w-96 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="history-4">
+                      <h3 class="text-xl font-bold py-1">4. Chennai</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-left pr-4 w-96 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="history-5">
+                      <h3 class="text-xl font-bold py-1">5. Hyderabad</h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p class="text-justify">
+                          <a href="#">
+                            <img
+                              class="float-left pr-4 w-96 pt-2"
+                              src="./image/tourist-1.jpg"
+                              alt="india gate"
+                            />
+                          </a>
+
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Top Universities ~~~~~~~~~~~~~~~-->
+        <section id="universities" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article>
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Top Universities</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  Top 10 Universities in India: The NIRF Rankings 2023 for top
+                  universities in India are now available. The NIRF ranking of
+                  best universities in India featured the top 100 universities.
+                  These top universities in India were chosen based on a variety
+                  of criteria, including total strength, overall intake,
+                  placement, projects, research facilities, financial resources,
+                  NAAC certification, and so on. In this article, we will
+                  discuss the top ten universities in India for undergraduate
+                  and postgraduate programmes. The Indian Institute of Science
+                  is ranked number 1 among India's top ten universities, with
+                  Jawaharlal Nehru University ranking second. Jamia Milia
+                  Islamia and Jadavpur University have been successful at
+                  keeping their position of third and fourth from the last year.
+                  The list of the top universities in India includes public,
+                  private, state, deemed and other universities. From the best
+                  government universities in India to the top private
+                  universities in India, this list comprises the top-tier
+                  institutions that have checked all the necessary boxes that
+                  create an ideal playground for the best minds in this country.
+                </p>
+
+                <div>
+                  <h4 class="card-title py-6">
+                    Top 10 Universities in India: NIRF India Rankings 2023
+                  </h4>
+                  <table class="table-auto border border-slate-500">
+                    <thead>
+                      <tr class="bg-slate-700 text-white">
+                        <th class="border-slate-600 px-4 py-4">NIRF Rank</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border border-slate-600">City</th>
+                        <th class="border border-slate-600">State</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-gray-50">
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          1
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Indian Institute of Science
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Bengaluru
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Karnataka
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Jawaharlal Nehru University
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          New Delhi
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">Delhi</td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          3
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Jamia Millia Islamia
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          New Delhi
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">Delhi</td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          4
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Jadavpur University
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Kolkata
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          West Bengal
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          5
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Banaras Hindu University
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Varanasi
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Uttar Pradesh
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py- text-center border-slate-600"
+                        >
+                          6
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Manipal Academy of Higher Education-Manipal
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Manipal
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Karnataka
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          7
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Amrita Vishwa Vidyapeetham
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Coimbatore
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Tamil Nadu
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          8
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Vellore Institute of Technology
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Vellore
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Tamil Nadu
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          9
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Aligarh Muslim University
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Aligarh
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Uttar Pradesh
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py- text-center border-slate-600"
+                        >
+                          10
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          University of Hyderabad
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Hyderabad
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          Telangana
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div>
+                  <ul>
+                    <li class="pt-8">
+                      <h3 class="text-lg font-bold py-1">
+                        1. Indian Institute of Science (NIRF Rank 1)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          NIRF 2023 has declared IISc, Bangalore to be India's
+                          top-rated university, offering undergraduate,
+                          postgraduate, and doctoral programmes in general
+                          management, astronomy, aerospace engineering, chemical
+                          engineering, civil engineering, computer science
+                          engineering, electrical engineering, materials science
+                          and technology, electronics and communication
+                          engineering, manufacturing engineering, transportation
+                          engineering, and product design. Admission to B.Sc.
+                          (Research) is based on KVPY, JEE, or NEET-UG, while
+                          admission to 56 PG programmes is based on GATE
+                          results.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        2. Jawaharlal Nehru University (NIRF Rank 2)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          JNU has been ranked second in NIRF 2023 ranking. This
+                          university from New Delhi is considered to be one of
+                          the ideal places to study bachelor's degree in foreign
+                          languages, B.Sc. to M.Sc. integrated programmes
+                          through CUET-UG, while CUET-PG is needed to get
+                          enrolled in courses such as M.A., M.Sc., post-graduate
+                          diploma, advanced diploma programmes and, MCA, M.Tech.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        3. Jamia Millia Islamia, New Delhi (NIRF Rank 3)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          Among the top ten university in India, Jamia Milia
+                          Islamia is ranked 3. JMI offers a total of 256 courses
+                          including diploma, undergraduate, postgraduate, and
+                          doctoral levels. There JMI courses are offered in
+                          full-time, part-time and online modes. Some of the
+                          popular UG courses at JMI are B.A.(Hons)(Mass Media
+                          Hindi), B.A. Hons. (Turkish Language & Literature),
+                          B.A. (Hons.) Arabic, etc. M.A.(History), M.A.(Arabic),
+                          M.A.(English), M.A.(Islamic Studies), among others are
+                          some popular postgraduate courses.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        4. Jadavpur University (NIRF Rank 4)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          There are near about 146 courses offered at Jadavpur
+                          University. The university offers diploma,
+                          undergraduate, postgraduate and doctoral levels
+                          courses. JU courses are offered in both full-time and
+                          part-time modes. Jadavpur university is ranked 4 in
+                          the India's top 10 university as per the NIRF
+                          university ranking in india. Some popular UG courses
+                          at Jadavpur University are B.Tech, B.Pharma, B.Arch,
+                          B.Sc., etc.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        5. Banaras Hindu University (NIRF Rank 5)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          BHU Varanasi offers admission to diploma,
+                          undergraduate, and postgraduate programmes in a
+                          science, commerce, and arts stream. BHU is founded by,
+                          Pandit Madan Mohan Malviya, in 1916. IT is among the
+                          best universities in India and holds 6th rank in the
+                          NIRF 2023 ranking. BHU offers a number of programmes
+                          including B.P.Ed, B.Sc Industrial Microbiology, M.Com,
+                          M.Lib.I.Sc, M.C.A, M.P.Ed, M.Tech Soil and Water
+                          Conservation Engineering, M.Ed Special Education, and
+                          more. Admission to BHU UG and PG programmes is done
+                          through CUET.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        6. Manipal Academy of Higher Education, Manipal (NIRF
+                        Rank 6)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          MAHE is one of the leading universities in India
+                          situated in Karnataka. The University has two
+                          off-campuses in Mangaluru and Bengaluru. In the list
+                          of top 10 universities in India, Manipal Academy of
+                          Higher Education secured rank 7. There are 300+
+                          programs offered by the university in 31 disciplines.
+                          The majority of UG, PG and other courses are being
+                          offered in the field of Health Sciences, Science,
+                          Technology & Management, Humanities, Liberal Arts and
+                          Social Sciences.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        7. Amrita Vishwa Vidyapeetham (NIRF Rank 7)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          Ranked 5 in the Top universities in India, Amrita
+                          Vishwa Vidyapeetham offers courses in various fields
+                          including arts and science, Ayurveda, agriculture,
+                          business/management, biotechnology, dentistry,
+                          engineering, medicine, mass communication, and
+                          nursing. The university has 7 campuses in Amritapuri,
+                          Amaravati, Bengaluru, Chennai, Coimbatore, Kochi, and
+                          Mysuru. The courses offered in Amrita Vishwa
+                          Vidyapeeth are B.Sc Hons, B.A, B.B.A, B.C.A, P.G.D,
+                          M.B.A, M.A, M.S.W and PhD, etc,
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        8. Vellore Institute of Technology (NIRF Rank 8)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          VIT offers 66 undergraduates, 58 postgraduates, 15
+                          integrated programmes, 2 research programmes and 2
+                          M.Tech industrial programmes. VIT provided admission
+                          to undergraduate (B.Tech/B.Sc Fashion Designing),
+                          Integrated (BA LLB/BBA LLB), postgraduate (PG
+                          Science/MBA/MCA/M.Tech/LLM) and research courses. For
+                          some of the courses, VIT conducts an entrance
+                          examination, while admission to some courses is done
+                          through merit.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        9. Aligarh Muslim University (NIRF Rank 9)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          Aligarh Muslim University (AMU) is a central
+                          university owned by the government. It was established
+                          in 1920 and is accredited by NAAC. It offers 193
+                          courses at 4 levels: diploma, UG, PG and doctoral. It
+                          has a campus area of 1155 acres and 26151 students
+                          with 1197 faculty. According to the NIRF Ranking 2023,
+                          AMU ranks 19th in the overall category and 11th in the
+                          university category.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h3 class="text-lg font-bold py-1">
+                        10. University of Hyderabad (NIRF Rank 10)
+                      </h3>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <p>
+                          University of Hyderabad, a Central University is
+                          counted among the top 10 universities in India. It is
+                          a quite popular and prominent institution for higher
+                          education in India. The University of Hyderabad offers
+                          a variety of courses at UG and PG levels. The
+                          admission in 41 PG courses is done on the basis of the
+                          candidate's performance in the CUET PG exam. The
+                          admission to UG courses is also offered on the basis
+                          of CUET UG scores.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Top Hotels ~~~~~~~~~~~~~~~-->
+        <section id="hotels" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="pb-8">
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Top Hotels</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  The mesmerising country of India is known to amaze its
+                  visitors with vibrant surprises. Exploring its diverse
+                  cultures, magnificent historical monuments, and astonishing
+                  landscapes is a part of every traveller’s bucket list. When it
+                  comes to accommodation, India offers a plethora of remarkable
+                  options like the palace hotels, tented camps, ultra-luxurious
+                  modern hotels. Since you’re spoiled for choices here, we’ve
+                  handpicked some of the best hotels in India that deserve a
+                  visit.
+                </p>
+
+                <div>
+                  <h4 class="card-title py-6">Top 10 Top Hotels in India</h4>
+                  <ul class="list-decimal pl-10 leading-relaxed text-linkClor">
+                    <li>
+                      <a href="#hotel-1" class="hover:underline"
+                        >TAJ LAKE PALACE</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-2" class="hover:underline"
+                        >THE OBEROI UDAIVILAS</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-3" class="hover:underline"
+                        >THE LEELA PALACE UDAIPUR</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-4" class="hover:underline"
+                        >TAJ ARAVALI RESORT & SPA</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-5" class="hover:underline"
+                        >RAMBAGH PALACE</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-6" class="hover:underline"
+                        >OBEROI RAJVILAS</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-7" class="hover:underline"
+                        >JW MARRIOTT JAIPUR RESORT & SPA</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-8" class="hover:underline"
+                        >THE TAJ MAHAL PALACE</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-9" class="hover:underline"
+                        >THE ST. REGIS MUMBAI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#hotel-10" class="hover:underline"
+                        >SOHO HOUSE MUMBAI</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <ul>
+                    <li class="pt-8" id="hotel-1">
+                      <h3 class="text-xl font-bold py-1">1. TAJ LAKE PALACE</h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+
+                        <p>
+                          Imagine staying in a majestic abode right in the
+                          middle of a lake surrounded by breathtaking views of
+                          hills and elaborate palaces. Sounds magical right?
+                          Well, that’s just one of the many splendid experiences
+                          that the Taj Lake Palace has to offer its guests. This
+                          18th century historical palace, situated in the
+                          magnificent City of Udaipur, is undeniably one of the
+                          best hotels in India. This white marble marvel is a
+                          stunning example of royal grandeur with 65 luxurious
+                          rooms and 18 grand suites. The awe-inspiring décor,
+                          ornate glasswork and exquisite artworks in the palace
+                          give a glimpse of the princely bygone era. Right from
+                          the moment you enter this hotel that floats in Lake
+                          Pichola, you will be treated like a royal guest. From
+                          the grand welcome with a rose petal shower to the city
+                          tour in a vintage car, they have everything in place
+                          for an ethereal experience. The exclusive
+                          resident-only restaurants serve authentic Indian
+                          cuisines and signature international dishes that will
+                          pamper your tastebuds. The Jiva Spa boat lets you
+                          escape into a world of tranquillity with classic
+                          therapies and rejuvenating Spa indulgences. Come
+                          prepared for a stay straight out of a fairy-tale and
+                          take with you a memory to be cherished forever.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-2">
+                      <h3 class="text-xl font-bold py-1">
+                        2. THE OBEROI UDAIVILAS
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-3">
+                      <h3 class="text-xl font-bold py-1">
+                        3. THE LEELA PALACE UDAIPUR
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-4">
+                      <h3 class="text-xl font-bold py-1">
+                        4. TAJ ARAVALI RESORT & SPA
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-5">
+                      <h3 class="text-xl font-bold py-1">5. RAMBAGH PALACE</h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-6">
+                      <h3 class="text-xl font-bold py-1">6. OBEROI RAJVILAS</h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-7">
+                      <h3 class="text-xl font-bold py-1">
+                        7. JW MARRIOTT JAIPUR RESORT & SPA
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-8">
+                      <h3 class="text-xl font-bold py-1">
+                        8. THE TAJ MAHAL PALACE
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-9">
+                      <h3 class="text-xl font-bold py-1">
+                        9. THE ST. REGIS MUMBAI
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="py-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="pt-8" id="hotel-10">
+                      <h3 class="text-xl font-bold py-1">
+                        10. SOHO HOUSE MUMBAI
+                      </h3>
+                      <p class="text-sm pb-1">
+                        Address:<a href="#" class="text-linkClor"
+                          >Pichola, Udaipur, Rajasthan 313001, India (Location
+                          Map)</a
+                        >
+                      </p>
+                      <div class="h-[1px] bg-gray-400"></div>
+
+                      <div class="pt-8">
+                        <img
+                          class="w-4/5 h-[30rem] object-cover pb-4"
+                          src="./image/hotel-1.jpg"
+                          alt="Hotel"
+                        />
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sit sapiente qui, eveniet pariatur doloribus
+                          corrupti delectus ipsam nihil minus, laborum sequi
+                          provident vero accusantium velit explicabo voluptatem
+                          unde voluptas, iure excepturi dolores dolore quae
+                          quibusdam? Ipsam voluptate est voluptatum nulla earum.
+                          Vero veritatis enim explicabo quo cupiditate totam
+                          voluptatum libero officiis suscipit dignissimos saepe,
+                          soluta debitis dolor quam adipisci, veniam in dicta?
+                          Aliquam fugit, consequuntur expedita mollitia ex quod
+                          cum accusantium sapiente dicta deleniti officiis animi
+                          beatae cumque magnam ab distinctio dolores omnis
+                          tenetur at iusto voluptates suscipit nobis reiciendis
+                          similique? At temporibus eveniet inventore quisquam
+                          fugit! Et, id fugit. Lorem ipsum dolor sit amet
+                          consectetur, adipisicing elit. Deleniti, enim quasi,
+                          velit numquam nesciunt, porro veritatis tempora
+                          expedita aperiam dignissimos earum rem quod laborum
+                          quisquam ipsa omnis ducimus culpa tenetur. Similique
+                          accusamus consequatur voluptatibus et eligendi quos
+                          nulla numquam doloremque non quibusdam voluptates
+                          voluptatum velit asperiores corporis molestias nostrum
+                          beatae adipisci modi aperiam, exercitationem
+                          reprehenderit rerum! In, vero a consequatur dolore
+                          expedita, facere animi doloribus tenetur
+                          necessitatibus quo voluptates ipsum! Ipsum voluptate
+                          excepturi veritatis similique quae. Expedita quod
+                          dolore eaque cumque ipsam natus id nobis, incidunt,
+                          mollitia magnam ipsum molestiae accusamus ratione aut?
+                          Animi, dolores. Saepe perferendis itaque fugit ipsa.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ states ~~~~~~~~~~~~~~~-->
+        <section id="states" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article>
+                <div class="pb-8">
+                  <h2 class="data-title py-1">States</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <p>
+                  Top 10 Universities in India: The NIRF Rankings 2023 for top
+                  universities in India are now available. The NIRF ranking of
+                  best universities in India featured the top 100 universities.
+                  These top universities in India were chosen based on a variety
+                  of criteria, including total strength, overall intake,
+                  placement, projects, research facilities, financial resources,
+                  NAAC certification, and so on. In this article, we will
+                  discuss the top ten universities in India for undergraduate
+                  and postgraduate programmes. The Indian Institute of Science
+                  is ranked number 1 among India's top ten universities, with
+                  Jawaharlal Nehru University ranking second. Jamia Milia
+                  Islamia and Jadavpur University have been successful at
+                  keeping their position of third and fourth from the last year.
+                  The list of the top universities in India includes public,
+                  private, state, deemed and other universities. From the best
+                  government universities in India to the top private
+                  universities in India, this list comprises the top-tier
+                  institutions that have checked all the necessary boxes that
+                  create an ideal playground for the best minds in this country.
+                </p>
+
+                <div>
+                  <h4 class="card-title py-6">States and Capitals</h4>
+                  <table class="table-auto border border-slate-500">
+                    <thead>
+                      <tr class="bg-slate-700 text-white">
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="bg-gray-50">
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          1
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          3
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          4
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          5
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py- text-center border-slate-600"
+                        >
+                          6
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          7
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="pb-10">
+                  <h4 class="card-title py-6">Union Territories</h4>
+                  <table class="table-auto border border-slate-500">
+                    <thead>
+                      <tr class="bg-slate-700 text-white">
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                        <th class="border-slate-600 px-4 py-4">SL No.</th>
+                        <th class="border border-slate-600">Name</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="bg-gray-50">
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          1
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+
+                        <td
+                          class="border px-4 py-2 text-center border-slate-600"
+                        >
+                          2
+                        </td>
+                        <td class="border px-4 py-2 border-slate-600">
+                          <h3 class="font-bold underline text-linkClor">
+                            <a href="#">Andhra Pradesh</a>
+                          </h3>
+                          <p class="text-sm">(Amaravati)</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Map ~~~~~~~~~~~~~~~-->
+        <section id="map" class="pt-8">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="pb-8">
+                <div class="pb-8">
+                  <h2 class="data-title py-1">Map</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+                <iframe
+                  class="w-4/5 h-[30rem]"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15283599.358027074!2d72.10082996269153!3d20.73670481863216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1698817267659!5m2!1sen!2sin"
+                  style="border: 0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~ Externla links ~~~~~~~~~~~~~~~-->
+        <section id="external">
+          <div class="container-lg flex">
+            <div class="text-black w-full pr-24">
+              <article class="pb-8">
+                <div class="pb-8">
+                  <h2 class="text-lg font-bold py-1">External Links</h2>
+                  <div class="h-[1px] bg-gray-400"></div>
+                </div>
+
+                <div>
+                  <h5 class="font-semibold">Government</h5>
+
+                  <ul class="list-disc text-linkClor text-sm pl-8 py-4">
+                    <li>
+                      <a href="#"
+                        >Official website of the Government of India</a
+                      >
+                    </li>
+                    <li><a href="#">Government of India Web Directory</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 class="font-semibold">General information</h5>
+
+                  <ul class="list-disc text-linkClor text-sm pl-8 py-4">
+                    <li>
+                      <a href="#"
+                        >India. The World Factbook. Central Intelligence
+                        Agency.</a
+                      >
+                    </li>
+                    <li><a href="#">India at Curlie</a></li>
+                    <li><a href="#">India from BBC News</a></li>
+                    <li><a href="#">Wikipedia</a></li>
+                    <li>
+                      <a href="#"
+                        >Geographic data related to India at OpenStreetMap</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer id="footer" class="bg-darkColor">
+      <div class="bg-color-primary-dark relative">
+        <div class="px-3 lg:px-28 py-6">
+          <div class="grid gap-10 md:grid-cols-3 pb-6">
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">Globe Info</h4>
+              <p class="leading-relaxed para">
+                Your Gateway to Knowledge. Explore a world of information, from
+                travel tips to tech trends and beyond. We're here to empower
+                your curiosity and keep you informed. Join our global community
+                of knowledge seekers and embark on a journey of discovery. The
+                pursuit of knowledge starts here.
+              </p>
+              <div class="flex gap-3 items-center">
+                <p>Follow Us</p>
+                <i
+                  class="fa-brands fa-square-facebook text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+                ></i>
+                <i
+                  class="fa-brands fa-square-instagram text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+                ></i>
+                <i
+                  class="fa-brands fa-square-threads text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+                ></i>
+                <i
+                  class="fa-brands fa-square-x-twitter text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+                ></i>
+              </div>
+            </div>
+            <div class="flex justify-between md:justify-around">
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Quick Links</h4>
+                <ul class="space-y-3">
+                  <li
+                    class="underline hover:no-underline hover:text-color-secondary"
+                  >
+                    <a href="#">Home</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#features">Features</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#gallery">Gallery</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#country">Country</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#blog">Blog</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Help</h4>
+                <ul class="space-y-3">
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#">About Us</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#features">Partners</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#testimonial">Career</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#pricing">Design Guide</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#blog">Terms & Conditions</a>
+                  </li>
+                  <li
+                    class="no-underline hover:underline hover:text-color-secondary"
+                  >
+                    <a href="#contact">Help</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <iframe
+                class="w-full h-64 rounded-md mb-4"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1154.7709768411687!2d75.55680240507495!3d31.344903809416877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a9c00d46e6f%3A0x1df5c0851f0720fe!2sDAV%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1696188720416!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="flex justify-center pt-4 border-t border-color-gray">
+            <p>2023 &copy; Globe Info. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
