@@ -1,177 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~-->
-    <title>World Info</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~-->
+		<title>World Info</title>
 
-    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+		<!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
-    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+		<!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 
-    <!--~~~~~~~~~~~~~~~ Swiper ~~~~~~~~~~~~~~~-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+		<!--~~~~~~~~~~~~~~~ Swiper ~~~~~~~~~~~~~~~-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 
-    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
-    <link rel="stylesheet" href="./main/output.css" />
-  </head>
+		<!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+		<link
+			rel="stylesheet"
+			href="./main/output.css"
+		/>
+	</head>
 
-  <body>
-    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
-    <header class="bg-darkColor fixed top-0 left-0 w-full z-50" id="header">
-      <nav
-        class="px-3 lg:px-28 relative h-20 flex items-center justify-between"
-      >
-        <div>
-          <a href="#home"
-            ><img src="./image/logo.png" alt="logo" class="w-20"
-          /></a>
-        </div>
+	<body>
+		<!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+		<header
+			class="bg-darkColor fixed top-0 left-0 w-full z-50"
+			id="header"
+		>
+			<nav
+				class="px-3 lg:px-28 relative h-20 flex items-center justify-between"
+			>
+				<div>
+					<a href="#home"
+						><img
+							src="./image/logo.png"
+							alt="logo"
+							class="w-20"
+					/></a>
+				</div>
 
-        <div
-          class="hidden absolute top-0 right-0 w-full py-20 bg-darkColor lg:block lg:static lg:py-0 lg:w-auto menu"
-        >
-          <ul class="flex flex-col text-center gap-6 lg:flex-row">
-            <li>
-              <a
-                href="#home"
-                class="nav-link navbar hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >Home</a
-              >
-            </li>
-            <li class="flex group/item relative items-center flex-col dropdown">
-              <a
-                href="#country"
-                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >Country
-                <i class="fa-solid fa-caret-down"></i>
-               </a
-              >
-              <style>
-                .scrollbar::-webkit-scrollbar{
-                  width: 5px;
-                }
-                .scrollbar::-webkit-scrollbar-track{
-                  box-shadow: inset 0px 0px 5px grey;
-                  border-radius: 10px;
-                }
-                .scrollbar::-webkit-scrollbar-thumb{
-                  background-color: orange;
-                  border-radius: 10px;
-                }
-                .scrollbar::-webkit-scrollbar-thumb:hover{
-                  background:#b30000;
-                }
-              </style>
-              <div class="scrollbar hidden item:visible absolute top-7 py-6 h-48 overflow-y-auto w-[8rem] rounded-lg bg-darkColorLight text-white text-left px-3">
-               <ul class="country-list">
-                <li><a href="country.html">India</a></li>
-                <li><a href="country.html">USA</a></li>
-                <li><a href="country.html">UAE</a></li>
-                <li><a href="country.html">Australia hh</a></li>
-                <li><a href="country.html">China</a></li>
-               </ul>
-              </div>
-            </li>
-            <li>
-              <a
-                href="#blogs"
-                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a
-                href="#review"
-                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >Review</a
-              >
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
-                >Contact</a
-              >
-            </li>
-            <li class="group">
-              Join Us
-              <div
-                class="flex-col absolute bg-black -ml-2 p-2 rounded pr-5 hidden group-hover:block"
-              >
-                <a href="#">Sign up</a><br />
-                <a href="#">Sign in</a>
-              </div>
-            </li>
-          </ul>
-          <div
-            class="absolute top-[.7rem] right-4 text-2xl cursor-pointer md:hidden"
-          >
-            <i class="ri-close-line" id="close"></i>
-          </div>
-        </div>
+				<div
+					class="hidden absolute top-0 right-0 w-full py-20 bg-darkColor lg:block lg:static lg:py-0 lg:w-auto menu"
+				>
+					<ul class="flex flex-col text-center gap-6 lg:flex-row">
+						<li>
+							<a
+								href="#home"
+								class="nav-link navbar hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>Home</a
+							>
+						</li>
+						<li
+							class="flex group/item relative items-center flex-col dropdown"
+						>
+							<a
+								href="#country"
+								class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>Country
+								<i class="fa-solid fa-caret-down"></i>
+							</a>
+							<style>
+								.scrollbar::-webkit-scrollbar {
+									width: 5px;
+								}
+								.scrollbar::-webkit-scrollbar-track {
+									box-shadow: inset 0px 0px 5px grey;
+									border-radius: 10px;
+								}
+								.scrollbar::-webkit-scrollbar-thumb {
+									background-color: orange;
+									border-radius: 10px;
+								}
+								.scrollbar::-webkit-scrollbar-thumb:hover {
+									background: #b30000;
+								}
+							</style>
+							<div
+								class="scrollbar hidden item:visible absolute top-7 py-6 h-48 overflow-y-auto w-[8rem] rounded-lg bg-darkColorLight text-white text-left px-3"
+							>
+								<ul class="country-list">
+									<li><a href="country.html">India</a></li>
+									<li><a href="country.html">USA</a></li>
+									<li><a href="country.html">UAE</a></li>
+									<li>
+										<a href="country.html">Australia hh</a>
+									</li>
+									<li><a href="country.html">China</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a
+								href="#blogs"
+								class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>Blog</a
+							>
+						</li>
+						<li>
+							<a
+								href="#review"
+								class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>Review</a
+							>
+						</li>
+						<li>
+							<a
+								href="#about"
+								class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>About</a
+							>
+						</li>
+						<li>
+							<a
+								href="#contact"
+								class="nav-link hover:scale-125 ease-in-out duration-200 inline-block hover:text-secondaryColor"
+								>Contact</a
+							>
+						</li>
+						<li class="group">
+							Join Us
+							<div
+								class="flex-col absolute bg-black -ml-2 p-2 rounded pr-5 hidden group-hover:block"
+							>
+								<a href="#">Sign up</a><br />
+								<a href="#">Sign in</a>
+							</div>
+						</li>
+					</ul>
+					<div
+						class="absolute top-[.7rem] right-4 text-2xl cursor-pointer md:hidden"
+					>
+						<i
+							class="ri-close-line"
+							id="close"
+						></i>
+					</div>
+				</div>
 
-        <div class="flex items-center gap-5">
-          <a href="#"
-            ><i
-              class="fa-brands fa-square-facebook hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
-            ></i
-          ></a>
-          <a href="#"
-            ><i
-              class="fa-brands fa-square-instagram hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
-            ></i
-          ></a>
-          <a href="#"
-            ><i
-              class="fa-brands fa-square-threads hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
-            ></i
-          ></a>
-          <a href="#"
-            ><i
-              class="fa-brands fa-square-x-twitter hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
-            ></i>
-          </a>
+				<div class="flex items-center gap-5">
+					<a href="#"
+						><i
+							class="fa-brands fa-square-facebook hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+						></i
+					></a>
+					<a href="#"
+						><i
+							class="fa-brands fa-square-instagram hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+						></i
+					></a>
+					<a href="#"
+						><i
+							class="fa-brands fa-square-threads hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+						></i
+					></a>
+					<a href="#"
+						><i
+							class="fa-brands fa-square-x-twitter hidden lg:block text-3xl hover:scale-110 ease-in-out duration-200"
+						></i>
+					</a>
 
-          <div id="hamburger" class="lg:hidden">
-            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
+					<div
+						id="hamburger"
+						class="lg:hidden"
+					>
+						<i class="ri-menu-2-line cursor-pointer text-xl"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-    <!--~~~~~~~~~~~~~~~ Main Area ~~~~~~~~~~~~~~~-->
-    <main>
-      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
-      <section id="home">
+		<!--~~~~~~~~~~~~~~~ Main Area ~~~~~~~~~~~~~~~-->
+		<main>
+			<!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+			<!-- <section id="home">
         <div
           class="bg-[url('/image/bg.jpg')] h-screen w-full bg-cover bg-no-repeat bg-center -z-10"
         >
-          <div class="h-screen w-full flex justify-center ">
+          <div class="h-screen w-full flex justify-center items-center ">
             <div
-              class="bg-[url('/image/earth.jpg')] md:mt-28 bg-cover md:shadow-boxShadow shadow-boxShadowSecondary animate-rotateX md:h-[650px] md:w-[650px] sm:h-96 sm:w-96 h-80 w-80 rounded-full"
+              class="bg-[url('/image/earth.jpg')] md:mt-28 bg-cover md:shadow-boxShadow shadow-boxShadowSecondary animate-rotateX md:h-[650px] md:w-[650px] h-[700px] w-[700px]  rounded-full"
             ></div>
 
             <div
@@ -209,589 +232,781 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
-      <section id="about" class="text-black">
-        <div class="px-3 lg:px-28 pt-20">
-          <div class="text-center mb-14">
-            <h2 class="about-title">About Us</h2>
-            <div class="sep mx-auto"></div>
-          </div>
+			<section id="home">
+				<div
+					class="relative bg-[url('/image/bg.jpg')] h-screen w-full bg-cover bg-no-repeat bg-center -z-10"
+				>
+					<div
+						class="h-screen w-full flex justify-center items-center relative"
+					>
+						<!-- Earth Image -->
+						<div class="relative flex justify-center items-center">
+							<div
+								class="bg-[url('/image/earth.jpg')] bg-cover md:shadow-boxShadow shadow-boxShadowSecondary animate-rotateX md:h-[600px] md:w-[600px] md:mt-16 sm:h-[450px] sm:w-[450px] h-[400px] md:ml-0 ml-4 w-[400px] rounded-full"
+							></div>
+						</div>
+						<!-- Overlay with Text and Search Form -->
+						<div
+							class="absolute inset-0 bg-[rgba(17,17,17,0.27)] flex flex-col justify-center items-center px-4 text-center"
+						>
+							<h1
+								class="md:text-6xl md:w-2/3 sm:text-5xl text-3xl font-bold text-slate-200 md:mb-10 sm:mb-8 mb-6"
+							>
+								Explore the World's Knowledge at One Place
+							</h1>
+							<!-- Search Form -->
+							<form
+								action="#"
+								class="w-full max-w-lg"
+							>
+								<div
+									class="flex items-center mb-6 justify-center"
+								>
+									<i
+										class="ri-search-line text-black text-2xl bg-white pl-3 py-1 rounded-l-full"
+									></i>
+									<input
+										type="search"
+										name="search"
+										id="search"
+										placeholder="Search country"
+										class="pl-2 w-full py-2 rounded-r-full outline-none text-black md:w-[35rem] sm:w-[25rem] w-[18rem]"
+									/>
+								</div>
+								<button
+									type="submit"
+									class="bg-secondaryColor text-black font-bold py-2 px-8 rounded-full hover:bg-blue-700 transition"
+								>
+									Search
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 
-          <div class="flex flex-col gap-10 md:flex-row">
-            <div class="about-image flex-1">
-              <img
-                src="./image/about_71.jpg"
-                alt="about image"
-                class="rounded-lg h-96 w-full object-cover"
-              />
-            </div>
+			<!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+			<section
+				id="about"
+				class="text-black"
+			>
+				<div class="px-3 lg:px-28 pt-20">
+					<div class="text-center mb-14">
+						<h2 class="about-title">About Us</h2>
+						<div class="sep mx-auto"></div>
+					</div>
 
-            <div class="about-content flex-1">
-              <h2 class="about-title py-3 mb-4">
-                Find all information about our globe
-              </h2>
-              <p class="para">
-                Globe Info is your gateway to a world of knowledge and
-                exploration. Our website serves as a global hub for information
-                on diverse topics, ranging from travel guides and cultural
-                insights to technological trends and environmental updates.
-                Whether you're a curious traveler, a lifelong learner, or a
-                passionate researcher, Globe Info provides you with reliable,
-                up-to-date, and engaging content to satisfy your thirst for
-                knowledge about our fascinating planet and its countless facets.
-              </p>
-              <ul class="grid grid-cols-2 py-5 space-y-1">
-                <li class="text-sm font-bold text-paragraphColor">
-                  <i class="fa-solid fa-check text-secondaryColor"></i> Tourist
-                  Places
-                </li>
-                <li class="text-sm font-bold text-paragraphColor">
-                  <i class="fa-solid fa-check text-secondaryColor"></i> Top
-                  Hotels
-                </li>
-                <li class="text-sm font-bold text-paragraphColor">
-                  <i class="fa-solid fa-check text-secondaryColor"></i>
-                  Historical Places
-                </li>
-                <li class="text-sm font-bold text-paragraphColor">
-                  <i class="fa-solid fa-check text-secondaryColor"></i> Trending
-                  Technologies
-                </li>
-              </ul>
-              <a class="btn btn-primary" href="#">About Us</a>
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="flex flex-col gap-10 md:flex-row">
+						<div class="about-image flex-1">
+							<img
+								src="./image/about_71.jpg"
+								alt="about image"
+								class="rounded-lg h-96 w-full object-cover"
+							/>
+						</div>
 
-      <!--~~~~~~~~~~~~~~~ Blogs ~~~~~~~~~~~~~~~-->
-      <section id="blogs" class="text-black">
-        <div class="px-3 lg:px-28 pt-20 mb-12">
-          <div class="max-w-md mx-auto text-center">
-            <h2 class="about-title text-center">blogs</h2>
-            <div class="sep mx-auto"></div>
-          </div>
-        </div>
+						<div class="about-content flex-1">
+							<h2 class="about-title py-3 mb-4">
+								Find all information about our globe
+							</h2>
+							<p class="para">
+								Globe Info is your gateway to a world of
+								knowledge and exploration. Our website serves as
+								a global hub for information on diverse topics,
+								ranging from travel guides and cultural insights
+								to technological trends and environmental
+								updates. Whether you're a curious traveler, a
+								lifelong learner, or a passionate researcher,
+								Globe Info provides you with reliable,
+								up-to-date, and engaging content to satisfy your
+								thirst for knowledge about our fascinating
+								planet and its countless facets.
+							</p>
+							<ul class="grid grid-cols-2 py-5 space-y-1">
+								<li
+									class="text-sm font-bold text-paragraphColor"
+								>
+									<i
+										class="fa-solid fa-check text-secondaryColor"
+									></i>
+									Tourist Places
+								</li>
+								<li
+									class="text-sm font-bold text-paragraphColor"
+								>
+									<i
+										class="fa-solid fa-check text-secondaryColor"
+									></i>
+									Top Hotels
+								</li>
+								<li
+									class="text-sm font-bold text-paragraphColor"
+								>
+									<i
+										class="fa-solid fa-check text-secondaryColor"
+									></i>
+									Historical Places
+								</li>
+								<li
+									class="text-sm font-bold text-paragraphColor"
+								>
+									<i
+										class="fa-solid fa-check text-secondaryColor"
+									></i>
+									Trending Technologies
+								</li>
+							</ul>
+							<a
+								class="btn btn-primary"
+								href="#"
+								>About Us</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <div class="menu-items px-3 lg:px-28 pb-20">
-          <ul
-            class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"
-          >
-            <!-- blogs 1 -->
-            <li class="item-wrap food">
-              <div
-                class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
-              >
-                <img
-                  class="h-full w-full hover:scale-110 ease-linear duration-200"
-                  src="./image/lotus temple.jpg"
-                  alt="blogs image"
-                />
-              </div>
+			<!--~~~~~~~~~~~~~~~ Blogs ~~~~~~~~~~~~~~~-->
+			<section
+				id="blogs"
+				class="text-black"
+			>
+				<div class="px-3 lg:px-28 pt-20 mb-12">
+					<div class="max-w-md mx-auto text-center">
+						<h2 class="about-title text-center">blogs</h2>
+						<div class="sep mx-auto"></div>
+					</div>
+				</div>
 
-              <div class="pt-5">
-                <div class="mb-2">
-                  <h4 class="card-title">Lotus Temple</h4>
-                  <p class="para">
-                    The Lotus Temple, located in Delhi, India, is an
-                    architectural marvel and a symbol of unity, peace, and
-                    spirituality. Shaped like a blooming lotus flower, this
-                    breathtaking Bahá'í House of Worship welcomes people of all
-                    religions and backgrounds to meditate, reflect, and find
-                    inner peace.
-                  </p>
-                </div>
-                <a href="#" class="text-white btn bg-secondaryColor"
-                  >Read More</a
-                >
-              </div>
-            </li>
+				<div class="menu-items px-3 lg:px-28 pb-20">
+					<ul
+						class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"
+					>
+						<!-- blogs 1 -->
+						<li class="item-wrap food">
+							<div
+								class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
+							>
+								<img
+									class="h-full w-full hover:scale-110 ease-linear duration-200"
+									src="./image/lotus temple.jpg"
+									alt="blogs image"
+								/>
+							</div>
 
-            <!-- blogs 2 -->
-            <li class="item-wrap food">
-              <div
-                class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
-              >
-                <img
-                  class="h-full w-full hover:scale-110 ease-linear duration-200"
-                  src="./image/bodh gaya.jpg"
-                  alt="blogs image"
-                />
-              </div>
+							<div class="pt-5">
+								<div class="mb-2">
+									<h4 class="card-title">Lotus Temple</h4>
+									<p class="para">
+										The Lotus Temple, located in Delhi,
+										India, is an architectural marvel and a
+										symbol of unity, peace, and
+										spirituality. Shaped like a blooming
+										lotus flower, this breathtaking Bahá'í
+										House of Worship welcomes people of all
+										religions and backgrounds to meditate,
+										reflect, and find inner peace.
+									</p>
+								</div>
+								<a
+									href="#"
+									class="text-white btn bg-secondaryColor"
+									>Read More</a
+								>
+							</div>
+						</li>
 
-              <div class="pt-5">
-                <div class="mb-2">
-                  <h4 class="card-title">Bodh Gaya</h4>
-                  <p class="para">
-                    Bodh Gaya, a small but profoundly significant town in the
-                    Indian state of Bihar, holds a place of utmost reverence in
-                    the hearts of millions worldwide. It is here, beneath the
-                    Bodhi Tree, that Siddhartha Gautama, the historical Buddha,
-                    attained enlightenment more than 2,500 years ago.
-                  </p>
-                </div>
-                <a href="#" class="text-white btn bg-secondaryColor"
-                  >Read More</a
-                >
-              </div>
-            </li>
+						<!-- blogs 2 -->
+						<li class="item-wrap food">
+							<div
+								class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
+							>
+								<img
+									class="h-full w-full hover:scale-110 ease-linear duration-200"
+									src="./image/bodh gaya.jpg"
+									alt="blogs image"
+								/>
+							</div>
 
-            <!-- blogs 3-->
-            <li class="item-wrap food">
-              <div
-                class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
-              >
-                <img
-                  class="h-full w-full hover:scale-110 ease-linear duration-200"
-                  src="./image/kashmir.jpg"
-                  alt="blogs image"
-                />
-              </div>
+							<div class="pt-5">
+								<div class="mb-2">
+									<h4 class="card-title">Bodh Gaya</h4>
+									<p class="para">
+										Bodh Gaya, a small but profoundly
+										significant town in the Indian state of
+										Bihar, holds a place of utmost reverence
+										in the hearts of millions worldwide. It
+										is here, beneath the Bodhi Tree, that
+										Siddhartha Gautama, the historical
+										Buddha, attained enlightenment more than
+										2,500 years ago.
+									</p>
+								</div>
+								<a
+									href="#"
+									class="text-white btn bg-secondaryColor"
+									>Read More</a
+								>
+							</div>
+						</li>
 
-              <div class="pt-5">
-                <div class="mb-2">
-                  <h4 class="card-title">Kashmir</h4>
-                  <p class="para">
-                    Kashmir, often referred to as "Paradise on Earth," is a
-                    region located in the northern part of the Indian
-                    subcontinent. Kashmir is renowned for its breathtaking
-                    natural beauty. It features serene valleys, pristine lakes,
-                    lush green meadows, and snow-capped peaks that create a
-                    landscape.
-                  </p>
-                </div>
-                <a href="#" class="text-white btn bg-secondaryColor"
-                  >Read More</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+						<!-- blogs 3-->
+						<li class="item-wrap food">
+							<div
+								class="lg:h-60 sm:h-80 grid place-items-center bg-primaryColorLight rounded-md hover:bg-secondaryColor dark:bg-darkColorLight dark:hover:bg-secondaryColor ease-linear duration-200 overflow-hidden"
+							>
+								<img
+									class="h-full w-full hover:scale-110 ease-linear duration-200"
+									src="./image/kashmir.jpg"
+									alt="blogs image"
+								/>
+							</div>
 
-      <!--~~~~~~~~~~~~~~~ Reviews ~~~~~~~~~~~~~~~-->
-      <section id="review" class="py-20 bg-darkColorLight">
-        <div class="customer-review px-3 lg:px-28">
-          <div class="max-w-md mx-auto text-center">
-            <h2 class="about-title">Visitors Review</h2>
-            <div class="sep mx-auto"></div>
-          </div>
+							<div class="pt-5">
+								<div class="mb-2">
+									<h4 class="card-title">Kashmir</h4>
+									<p class="para">
+										Kashmir, often referred to as "Paradise
+										on Earth," is a region located in the
+										northern part of the Indian
+										subcontinent. Kashmir is renowned for
+										its breathtaking natural beauty. It
+										features serene valleys, pristine lakes,
+										lush green meadows, and snow-capped
+										peaks that create a landscape.
+									</p>
+								</div>
+								<a
+									href="#"
+									class="text-white btn bg-secondaryColor"
+									>Read More</a
+								>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-          <div class="swiper py-10">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <div
-                  class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
-                >
-                  <p class="para">
-                    I recently stumbled upon the Globe Info website while
-                    planning a long-overdue trip to Europe, and I couldn't be
-                    more grateful for this hidden gem of a travel resource. This
-                    website is an absolute treasure trove of information for
-                    travelers.
-                  </p>
-                  <div class="flex items-center">
-                    <img
-                      src="./image/review-1.jpg"
-                      alt="review image"
-                      class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div class="ml-3">
-                      <p class="font-oswald uppercase">John Doe</p>
-                      <p class="para">Designer</p>
-                    </div>
-                    <i
-                      class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
-                    ></i>
-                  </div>
-                </div>
-              </li>
+			<!--~~~~~~~~~~~~~~~ Reviews ~~~~~~~~~~~~~~~-->
+			<section
+				id="review"
+				class="py-20 bg-darkColorLight"
+			>
+				<div class="customer-review px-3 lg:px-28">
+					<div class="max-w-md mx-auto text-center">
+						<h2 class="about-title">Visitors Review</h2>
+						<div class="sep mx-auto"></div>
+					</div>
 
-              <li class="swiper-slide">
-                <div
-                  class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
-                >
-                  <p class="para">
-                    I recently stumbled upon the Globe Info website, and it has
-                    quickly become my go-to source for all things related to
-                    global information. This website is an absolute treasure
-                    trove of knowledge that has greatly enriched my
-                    understanding of the world.
-                  </p>
-                  <div class="flex items-center">
-                    <img
-                      src="./image/review-2.jpg"
-                      alt="review image"
-                      class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div class="ml-3">
-                      <p class="font-oswald uppercase">John Doe</p>
-                      <p class="para">Designer</p>
-                    </div>
-                    <i
-                      class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
-                    ></i>
-                  </div>
-                </div>
-              </li>
+					<div class="swiper py-10">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div
+									class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
+								>
+									<p class="para">
+										I recently stumbled upon the Globe Info
+										website while planning a long-overdue
+										trip to Europe, and I couldn't be more
+										grateful for this hidden gem of a travel
+										resource. This website is an absolute
+										treasure trove of information for
+										travelers.
+									</p>
+									<div class="flex items-center">
+										<img
+											src="./image/review-1.jpg"
+											alt="review image"
+											class="w-12 h-12 rounded-full object-cover"
+										/>
+										<div class="ml-3">
+											<p class="font-oswald uppercase">
+												John Doe
+											</p>
+											<p class="para">Designer</p>
+										</div>
+										<i
+											class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
+										></i>
+									</div>
+								</div>
+							</li>
 
-              <li class="swiper-slide">
-                <div
-                  class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
-                >
-                  <p class="para">
-                    The layout and design of the website are clean and
-                    user-friendly. It's easy to find what you're looking for,
-                    thanks to the well-organized categories and a search
-                    feature. Whether you're a casual reader or a research
-                    enthusiast.
-                  </p>
-                  <div class="flex items-center">
-                    <img
-                      src="./image/review-3.jpg"
-                      alt="review image"
-                      class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div class="ml-2">
-                      <p class="font-oswald uppercase">John Doe</p>
-                      <p class="para">Designer</p>
-                    </div>
-                    <i
-                      class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
-                    ></i>
-                  </div>
-                </div>
-              </li>
+							<li class="swiper-slide">
+								<div
+									class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
+								>
+									<p class="para">
+										I recently stumbled upon the Globe Info
+										website, and it has quickly become my
+										go-to source for all things related to
+										global information. This website is an
+										absolute treasure trove of knowledge
+										that has greatly enriched my
+										understanding of the world.
+									</p>
+									<div class="flex items-center">
+										<img
+											src="./image/review-2.jpg"
+											alt="review image"
+											class="w-12 h-12 rounded-full object-cover"
+										/>
+										<div class="ml-3">
+											<p class="font-oswald uppercase">
+												John Doe
+											</p>
+											<p class="para">Designer</p>
+										</div>
+										<i
+											class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
+										></i>
+									</div>
+								</div>
+							</li>
 
-              <li class="swiper-slide">
-                <div
-                  class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
-                >
-                  <p class="para">
-                    What I found most impressive is the diversity of topics
-                    covered on the website. From travel guides and technology
-                    reviews to health tips and cooking recipes, Globe Info has
-                    it all. The content is well-researched and well-written,
-                    making it a reliable source for information.
-                  </p>
-                  <div class="flex items-center">
-                    <img
-                      src="./image/review-4.jpg"
-                      alt="review image"
-                      class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div class="ml-3">
-                      <p class="font-oswald uppercase">John Doe</p>
-                      <p class="para">Designer</p>
-                    </div>
-                    <i
-                      class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
-                    ></i>
-                  </div>
-                </div>
-              </li>
+							<li class="swiper-slide">
+								<div
+									class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
+								>
+									<p class="para">
+										The layout and design of the website are
+										clean and user-friendly. It's easy to
+										find what you're looking for, thanks to
+										the well-organized categories and a
+										search feature. Whether you're a casual
+										reader or a research enthusiast.
+									</p>
+									<div class="flex items-center">
+										<img
+											src="./image/review-3.jpg"
+											alt="review image"
+											class="w-12 h-12 rounded-full object-cover"
+										/>
+										<div class="ml-2">
+											<p class="font-oswald uppercase">
+												John Doe
+											</p>
+											<p class="para">Designer</p>
+										</div>
+										<i
+											class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
+										></i>
+									</div>
+								</div>
+							</li>
 
-              <li class="swiper-slide">
-                <div
-                  class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
-                >
-                  <p class="para">
-                    Globe Info also excels in staying up-to-date. I noticed that
-                    they frequently update their articles to ensure accuracy and
-                    relevance and they add an engaging dimension to the
-                    articles. This dedication to maintaining the quality of
-                    their content is commendable.
-                  </p>
-                  <div class="flex items-center">
-                    <img
-                      src="./image/review-5.jpg"
-                      alt="review image"
-                      class="w-12 h-12 rounded-full"
-                    />
-                    <div class="ml-2">
-                      <p class="font-oswald uppercase">John Doe</p>
-                      <p class="para">Designer</p>
-                    </div>
-                    <i
-                      class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
-                    ></i>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
+							<li class="swiper-slide">
+								<div
+									class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
+								>
+									<p class="para">
+										What I found most impressive is the
+										diversity of topics covered on the
+										website. From travel guides and
+										technology reviews to health tips and
+										cooking recipes, Globe Info has it all.
+										The content is well-researched and
+										well-written, making it a reliable
+										source for information.
+									</p>
+									<div class="flex items-center">
+										<img
+											src="./image/review-4.jpg"
+											alt="review image"
+											class="w-12 h-12 rounded-full object-cover"
+										/>
+										<div class="ml-3">
+											<p class="font-oswald uppercase">
+												John Doe
+											</p>
+											<p class="para">Designer</p>
+										</div>
+										<i
+											class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
+										></i>
+									</div>
+								</div>
+							</li>
 
-      <!--~~~~~~~~~~~~~~~ Slider ~~~~~~~~~~~~~~~-->
-      <section id="slider">
-        <div class="px-3 lg:px-28 grid place-items-center">
-          <div
-            class="h-[250px] overflow-hidden m-auto relative w-full grid place-items-center"
-          >
-            <div class="flex w-[calc(250px*18)] gap-5 animate-scrollX">
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-1.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-2.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-3.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-4.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-5.png" class="w-full" alt="flag" />
-              </div>
+							<li class="swiper-slide">
+								<div
+									class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6"
+								>
+									<p class="para">
+										Globe Info also excels in staying
+										up-to-date. I noticed that they
+										frequently update their articles to
+										ensure accuracy and relevance and they
+										add an engaging dimension to the
+										articles. This dedication to maintaining
+										the quality of their content is
+										commendable.
+									</p>
+									<div class="flex items-center">
+										<img
+											src="./image/review-5.jpg"
+											alt="review image"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="ml-2">
+											<p class="font-oswald uppercase">
+												John Doe
+											</p>
+											<p class="para">Designer</p>
+										</div>
+										<i
+											class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"
+										></i>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
 
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-1.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-2.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-3.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-4.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-5.png" class="w-full" alt="flag" />
-              </div>
+			<!--~~~~~~~~~~~~~~~ Slider ~~~~~~~~~~~~~~~-->
+			<section id="slider">
+				<div class="px-3 lg:px-28 grid place-items-center">
+					<div
+						class="h-[250px] overflow-hidden m-auto relative w-full grid place-items-center"
+					>
+						<div
+							class="flex w-[calc(250px*18)] gap-5 animate-scrollX"
+						>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-1.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-2.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-3.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-4.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-5.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
 
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-1.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-2.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-3.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-4.png" class="w-full" alt="flag" />
-              </div>
-              <div class="h-[200px] w-[250px] flex items-center">
-                <img src="./image/flag-5.png" class="w-full" alt="flag" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-1.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-2.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-3.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-4.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-5.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
 
-      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
-      <section id="contact" class="text-black bg-secondaryColor">
-        <div class="px-3 lg:px-28 py-12">
-          <div class="text-center m-auto mb-20 md:w-1/2">
-            <h4 class="font-bold text-color-secondary mb-4">Have A Query?</h4>
-            <h1 class="title">Contact Us</h1>
-          </div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-1.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-2.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-3.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-4.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+							<div class="h-[200px] w-[250px] flex items-center">
+								<img
+									src="./image/flag-5.png"
+									class="w-full"
+									alt="flag"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-          <form>
-            <div class="w-full m-auto text-center md:w-2/3">
-              <div
-                class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2"
-              >
-                <input
-                  type="text"
-                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                  placeholder="Name"
-                />
+			<!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+			<section
+				id="contact"
+				class="text-black bg-secondaryColor"
+			>
+				<div class="px-3 lg:px-28 py-12">
+					<div class="text-center m-auto mb-20 md:w-1/2">
+						<h4 class="font-bold text-color-secondary mb-4">
+							Have A Query?
+						</h4>
+						<h1 class="title">Contact Us</h1>
+					</div>
 
-                <input
-                  type="email"
-                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                  placeholder="Email"
-                />
+					<form>
+						<div class="w-full m-auto text-center md:w-2/3">
+							<div
+								class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2"
+							>
+								<input
+									type="text"
+									class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+									placeholder="Name"
+								/>
 
-                <input
-                  type="tel"
-                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                  placeholder="Phone"
-                />
+								<input
+									type="email"
+									class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+									placeholder="Email"
+								/>
 
-                <input
-                  type="text"
-                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                  placeholder="Subject"
-                />
-              </div>
+								<input
+									type="tel"
+									class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+									placeholder="Phone"
+								/>
 
-              <textarea
-                rows="4"
-                class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary resize-none"
-                placeholder="Message"
-              ></textarea>
+								<input
+									type="text"
+									class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+									placeholder="Subject"
+								/>
+							</div>
 
-              <button class="btn bg-darkColor text-white mt-10">
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
-    <footer id="footer" class="bg-darkColor">
-      <div class="bg-color-primary-dark relative">
-        <div class="px-3 lg:px-28 py-12">
-          <div class="grid gap-10 md:grid-cols-3 pb-10">
-            <div class="space-y-6">
-              <h4 class="font-bold text-lg">Globe Info</h4>
-              <p class="leading-relaxed para">
-                Your Gateway to Knowledge. Explore a world of information, from
-                travel tips to tech trends and beyond. We're here to empower
-                your curiosity and keep you informed. Join our global community
-                of knowledge seekers and embark on a journey of discovery. The
-                pursuit of knowledge starts here.
-              </p>
-              <div class="flex gap-3 items-center">
-                <p>Follow Us</p>
-                <i
-                  class="fa-brands fa-square-facebook text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
-                ></i>
-                <i
-                  class="fa-brands fa-square-instagram text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
-                ></i>
-                <i
-                  class="fa-brands fa-square-threads text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
-                ></i>
-                <i
-                  class="fa-brands fa-square-x-twitter text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
-                ></i>
-              </div>
-            </div>
-            <div class="flex justify-between md:justify-around">
-              <div class="space-y-6">
-                <h4 class="font-bold text-lg">Quick Links</h4>
-                <ul class="space-y-3">
-                  <li
-                    class="underline hover:no-underline hover:text-color-secondary"
-                  >
-                    <a href="#">Home</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#features">Features</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#gallery">Gallery</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#country">Country</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#blog">Blog</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
+							<textarea
+								rows="4"
+								class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary resize-none"
+								placeholder="Message"
+							></textarea>
 
-              <div class="space-y-6">
-                <h4 class="font-bold text-lg">Help</h4>
-                <ul class="space-y-3">
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#">About Us</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#features">Partners</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#testimonial">Career</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#pricing">Design Guide</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#blog">Terms & Conditions</a>
-                  </li>
-                  <li
-                    class="no-underline hover:underline hover:text-color-secondary"
-                  >
-                    <a href="#contact">Help</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+							<button class="btn bg-darkColor text-white mt-10">
+								Send Message
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+		<footer
+			id="footer"
+			class="bg-darkColor"
+		>
+			<div class="bg-color-primary-dark relative">
+				<div class="px-3 lg:px-28 py-12">
+					<div class="grid gap-10 md:grid-cols-3 pb-10">
+						<div class="space-y-6">
+							<h4 class="font-bold text-lg">Globe Info</h4>
+							<p class="leading-relaxed para">
+								Your Gateway to Knowledge. Explore a world of
+								information, from travel tips to tech trends and
+								beyond. We're here to empower your curiosity and
+								keep you informed. Join our global community of
+								knowledge seekers and embark on a journey of
+								discovery. The pursuit of knowledge starts here.
+							</p>
+							<div class="flex gap-3 items-center">
+								<p>Follow Us</p>
+								<i
+									class="fa-brands fa-square-facebook text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+								></i>
+								<i
+									class="fa-brands fa-square-instagram text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+								></i>
+								<i
+									class="fa-brands fa-square-threads text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+								></i>
+								<i
+									class="fa-brands fa-square-x-twitter text-2xl cursor-pointer hover:scale-110 ease-in duration-200"
+								></i>
+							</div>
+						</div>
+						<div class="flex justify-between md:justify-around">
+							<div class="space-y-6">
+								<h4 class="font-bold text-lg">Quick Links</h4>
+								<ul class="space-y-3">
+									<li
+										class="underline hover:no-underline hover:text-color-secondary"
+									>
+										<a href="#">Home</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#features">Features</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#gallery">Gallery</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#country">Country</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#blog">Blog</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#contact">Contact</a>
+									</li>
+								</ul>
+							</div>
 
-            <div class="space-y-6">
-              <iframe
-                class="w-full h-64 rounded-md mb-6"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1154.7709768411687!2d75.55680240507495!3d31.344903809416877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a9c00d46e6f%3A0x1df5c0851f0720fe!2sDAV%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1696188720416!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+							<div class="space-y-6">
+								<h4 class="font-bold text-lg">Help</h4>
+								<ul class="space-y-3">
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#">About Us</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#features">Partners</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#testimonial">Career</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#pricing">Design Guide</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#blog">Terms & Conditions</a>
+									</li>
+									<li
+										class="no-underline hover:underline hover:text-color-secondary"
+									>
+										<a href="#contact">Help</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-          <div class="flex justify-center pt-10 border-t border-color-gray">
-            <p>2023 &copy; Globe Info. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--~~~~~~~~~~~~~~~ Swiper ~~~~~~~~~~~~~~~-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+						<div class="space-y-6">
+							<iframe
+								class="w-full h-64 rounded-md mb-6"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1154.7709768411687!2d75.55680240507495!3d31.344903809416877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a9c00d46e6f%3A0x1df5c0851f0720fe!2sDAV%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1696188720416!5m2!1sen!2sin"
+								width="600"
+								height="450"
+								style="border: 0"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+							></iframe>
+						</div>
+					</div>
 
-    <script>
-      const swiper = new Swiper(".swiper", {
-        speed: 400,
-        spaceBetween: 30,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        grabCursor: true,
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    </script>
+					<div
+						class="flex justify-center pt-10 border-t border-color-gray"
+					>
+						<p>2023 &copy; Globe Info. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--~~~~~~~~~~~~~~~ Swiper ~~~~~~~~~~~~~~~-->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!--~~~~~~~~~~~~~~~ Main js ~~~~~~~~~~~~~~~-->
-    <script src="main.js"></script>
-  </body>
+		<script>
+			const swiper = new Swiper(".swiper", {
+				speed: 400,
+				spaceBetween: 30,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				grabCursor: true,
+				breakpoints: {
+					640: {
+						slidesPerView: 1,
+					},
+					768: {
+						slidesPerView: 2,
+					},
+					1024: {
+						slidesPerView: 3,
+					},
+				},
+			});
+		</script>
+
+		<!--~~~~~~~~~~~~~~~ Main js ~~~~~~~~~~~~~~~-->
+		<script src="main.js"></script>
+	</body>
 </html>
